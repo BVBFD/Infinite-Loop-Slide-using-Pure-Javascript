@@ -43,3 +43,25 @@ li {
   cursor: pointer;
   user-select: none;
 }
+
+.dots {
+  position: relative;
+  top: 20px;
+  text-align: center;
+}
+
+.dots span {
+  display: inline-block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: #ccc;
+  border-radius: 50%;
+  transform: scale(1.1);
+}
+
+.dots span:hover {
+  transition: all 0.3s linear;
+  background: rgb(77, 197, 253);
+  transform: scale(1);
+}

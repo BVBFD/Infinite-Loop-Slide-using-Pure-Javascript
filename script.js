@@ -7,7 +7,15 @@ let slides = document.querySelector(".slides"),
   slideWidth = 200,
   slideMargin = 30,
   prevBtn = document.querySelector(".prev"),
-  nextBtn = document.querySelector(".next");
+  nextBtn = document.querySelector(".next"),
+  dots = document.querySelectorAll(".dots span");
+
+dots.forEach((dot) => {
+  dot.addEventListener("click", () => {
+    currentIdx = JSON.parse(dot.dataset.curidx);
+    slides.style.left = `${-currentIdx * 230}px`;
+  });
+});
 
 const moveSlide = (num) => {
   slides.style.left = `${-num * (slideWidth + slideMargin)}px`;
