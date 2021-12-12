@@ -12,7 +12,8 @@ let slides = document.querySelector(".slides"),
 const moveSlide = (num) => {
   slides.style.left = `${-num * (slideWidth + slideMargin)}px`;
   currentIdx = num;
-  if (currentIdx == slideCount || currentIdx == -slideCount) {
+  console.log(currentIdx, slideCount);
+  if (currentIdx === slideCount || currentIdx === -slideCount) {
     setTimeout(() => {
       slides.classList.remove("animated");
       slides.style.left = "0px";
