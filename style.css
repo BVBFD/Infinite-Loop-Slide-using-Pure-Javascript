@@ -17,6 +17,8 @@ li {
   position: absolute;
   left: 0;
   top: 0;
+  display: flex;
+  flex-direction: row;
 }
 .slides.animated {
   transition: 0.5s ease-out;
@@ -25,7 +27,6 @@ li {
   width: 200px;
   height: 200px;
   background: #ccc;
-  float: left;
 }
 .slides li:not(:last-child) {
   margin-right: 30px;
@@ -58,6 +59,8 @@ li {
   background: #ccc;
   border-radius: 50%;
   transform: scale(1.1);
+  cursor: pointer;
+  user-select: none;
 }
 
 .dots span:hover {
